@@ -1,0 +1,24 @@
+{
+  "name": "@talos/monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Talos—a vague chaos remake",
+  "main": "index.js",
+  "scripts": {
+    "setup": "lerna bootstrap",
+    "precommit": "lint-staged",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "*.js": ["standard"],
+    "*.jsx": ["standard"]
+  },
+  "author": "Matt Styles",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lerna": "^2.5.1",
+    "lint-staged": "^6.0.0",
+    "standard": "^10.0.3"
+  }
+}
