@@ -8,18 +8,19 @@ import {getTheme, getColor} from '../theme/utils'
 const StyledIcon = styled.i`
   position: relative;
   display: block;
-  width: ${props => props.size || props.theme.baseIconSize}rem;
-  height: ${props => props.size || props.theme.baseIconSize}rem;
+  width: ${props => props.size || getTheme('baseIconSize')}rem;
+  height: ${props => props.size || getTheme('baseIconSize')}rem;
 
   svg {
-    fill: ${props => props.color || props.theme.type.color.main};
+    fill: ${props => props.color || getColor('main')};
     transition: fill ease-out ${getTheme('transition.main')}ms;
   }
 
-  ${props => props.hoverColor && css`
+  ${props => props.hover && css`
     :hover {
       svg {
-        fill: ${props => props.hoverColor || getColor('primaryDark')};
+        fill: ${props => props.hover || getColor('primaryDark')};
+        transition: fill ease-in ${getTheme('transition.main')}ms;
       }
     }
   `}
@@ -29,7 +30,7 @@ export const Icon = ({
   icon,
   size,
   color,
-  hoverColor
+  hover
 }) => {
   const svg = {
     __html: getIcon(icon)
@@ -37,7 +38,7 @@ export const Icon = ({
 
   return (
     <StyledIcon
-      {...{size, color, hoverColor}}
+      {...{size, color, hover}}
       dangerouslySetInnerHTML={svg}
     />
   )
@@ -46,7 +47,7 @@ Icon.defaultProps = {
   icon: '',
   size: null,
   color: '',
-  hoverColor: ''
+  hover: ''
 }
 Icon.propTypes = {
   icon: PropTypes.string,
@@ -55,5 +56,5 @@ Icon.propTypes = {
     PropTypes.string
   ]),
   color: PropTypes.string,
-  hoverColor: PropTypes.string
+  hover: PropTypes.string
 }

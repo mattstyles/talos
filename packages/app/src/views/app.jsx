@@ -33,6 +33,7 @@ const App = ({state}) => (
       </Title>
       <Button onClick={update}>Click me</Button>
       <Icon icon='HOME' />
+      <Icon icon='SETTINGS' size='8.8' hover='rgb(250, 0, 0)' />
     </Fragment>
   </ThemeProvider>
 )
