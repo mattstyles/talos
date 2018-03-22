@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 
 import {getIcon} from './icons'
 import {getTheme, getColor} from '../theme/utils'
@@ -16,11 +16,13 @@ const StyledIcon = styled.i`
     transition: fill ease-out ${getTheme('transition.main')}ms;
   }
 
-  :hover {
-    svg {
-      fill: ${props => props.hoverColor || getColor('primaryDark')};
+  ${props => props.hoverColor && css`
+    :hover {
+      svg {
+        fill: ${props => props.hoverColor || getColor('primaryDark')};
+      }
     }
-  }
+  `}
 `
 
 export const Icon = ({

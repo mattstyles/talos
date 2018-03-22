@@ -1,11 +1,14 @@
 
 import {render} from 'react-dom'
+import {setGlobalStyling} from '@talos/components'
 
 import {signal} from 'signals'
 import App from 'views/app'
 import {debug, updateMessage} from 'core/updates'
 
 const el = document.querySelector('.js-main')
+
+setGlobalStyling()
 
 if (process.env.DEBUG) {
   signal.register(debug)

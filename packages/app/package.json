@@ -72,6 +72,7 @@
     "standard": "^10.0.3"
   },
   "dependencies": {
+    "@talos/components": "*",
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
     "open-color": "^1.6.2",

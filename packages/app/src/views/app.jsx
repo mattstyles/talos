@@ -1,7 +1,10 @@
 
-import Title from 'components/title'
-import styled from 'styled-components'
+import React, {Fragment} from 'react'
+import styled, {ThemeProvider} from 'styled-components'
 import oc from 'open-color'
+
+import {Icon, theme} from '@talos/components'
+import Title from 'components/title'
 
 import {signal} from 'signals'
 
@@ -23,12 +26,15 @@ const update = event => {
 }
 
 const App = ({state}) => (
-  <div>
-    <Title>
-      {`chaos-remake: ${state.message}`}
-    </Title>
-    <Button onClick={update}>Click me</Button>
-  </div>
+  <ThemeProvider theme={theme}>
+    <Fragment>
+      <Title>
+        {`chaos-remake: ${state.message}`}
+      </Title>
+      <Button onClick={update}>Click me</Button>
+      <Icon icon='HOME' />
+    </Fragment>
+  </ThemeProvider>
 )
 
 export default App

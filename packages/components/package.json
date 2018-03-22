@@ -2,7 +2,7 @@
   "name": "@talos/components",
   "version": "0.0.0",
   "description": "Components for talos",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
     "lint": "standard",
