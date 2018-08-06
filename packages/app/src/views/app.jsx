@@ -1,12 +1,15 @@
 
 import React, {Fragment} from 'react'
-import styled, {ThemeProvider} from 'styled-components'
+import Title from 'components/title'
+import styled from 'styled-components'
 import oc from 'open-color'
 
-import {Icon, theme} from '@talos/components'
-import Title from 'components/title'
+// import {Icon, theme} from '@talos/components'
 
 import {signal} from 'signals'
+
+import {Image} from '../components/image'
+import imagePath from '../assets/charb.png'
 
 const Button = styled.button`
   font-family: 'source code pro';
@@ -26,16 +29,30 @@ const update = event => {
 }
 
 const App = ({state}) => (
-  <ThemeProvider theme={theme}>
-    <Fragment>
-      <Title>
-        {`chaos-remake: ${state.message}`}
-      </Title>
-      <Button onClick={update}>Click me</Button>
-      <Icon icon='HOME' />
-      <Icon icon='SETTINGS' size='8.8' hover='rgb(250, 0, 0)' />
-    </Fragment>
-  </ThemeProvider>
+  <Fragment>
+    <Title>
+      {`chaos-remake: ${state.message}`}
+    </Title>
+    <Button onClick={update}>Click me</Button>
+    <Image
+      url={imagePath}
+      scale={16}
+      size={8}
+      u={0}
+      v={0}
+    />
+    <div style={{position: 'relative'}}>
+      <Image
+        url={imagePath}
+        scale={16}
+        size={8}
+        u={1}
+        v={1}
+        x={200}
+        y={200}
+      />
+    </div>
+  </Fragment>
 )
 
 export default App

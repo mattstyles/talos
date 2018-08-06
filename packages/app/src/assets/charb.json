@@ -1,0 +1,41 @@
+{
+	"meta": {
+		"image": "charb.png",
+		"size": {"w":16,"h":16},
+		"scale": "1"
+	},
+	"frames": {
+		"assassin.png":
+		{
+			"frame": {"x":0,"y":0,"w":8,"h":8},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":8,"h":8},
+			"sourceSize": {"w":8,"h":8}
+		},
+		"crawler.png":
+		{
+			"frame": {"x":8,"y":0,"w":8,"h":8},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":8,"h":8},
+			"sourceSize": {"w":8,"h":8}
+		},
+		"warrior.png":
+		{
+			"frame": {"x":0,"y":8,"w":8,"h":8},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":8,"h":8},
+			"sourceSize": {"w":8,"h":8}
+		},
+		"wizard.png":
+		{
+			"frame": {"x":8,"y":8,"w":8,"h":8},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":8,"h":8},
+			"sourceSize": {"w":8,"h":8}
+		}
+	}
+}
