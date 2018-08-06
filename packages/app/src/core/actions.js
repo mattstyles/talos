@@ -1,6 +1,14 @@
 
-const actions = {
-  anAction: 'app:anAction'
-}
+import {createActions} from 'signals'
 
-export default actions
+const actionNames = [
+  'updateMessage'
+]
+
+// export default createActions(actionNames)
+//   .reduce((actions, action, i) => {
+//     actions[actionNames[i]] = action
+//     return actions
+//   }, {})
+
+export const [updateMessage] = createActions(actionNames)

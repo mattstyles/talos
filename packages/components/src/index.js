@@ -5,6 +5,7 @@ import {theme} from './theme/index'
 
 export * from './icons'
 export * from './theme'
+export * from './button'
 
 export const setGlobalStyling = () => {
   injectGlobal`

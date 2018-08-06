@@ -78,7 +78,8 @@ export const theme = {
       transparentSelect: 'rgba(0, 0, 0, 0.4)',
       error: oc.red[7],
       errorHover: oc.red[8],
-      errorSelect: oc.red[9]
+      errorSelect: oc.red[9],
+      color: oc.white
     }
   },
 

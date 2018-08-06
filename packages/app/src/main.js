@@ -4,7 +4,7 @@ import {setGlobalStyling} from '@talos/components'
 
 import {signal} from 'signals'
 import App from 'views/app'
-import {debug, updateMessage} from 'core/updates'
+import coreUpdates, {debug} from 'core/updates'
 
 const el = document.querySelector('.js-main')
 
@@ -14,7 +14,7 @@ if (process.env.DEBUG) {
   signal.register(debug)
 }
 
-signal.register(updateMessage)
+signal.register(coreUpdates)
 
 signal.observe(state => {
   render(
