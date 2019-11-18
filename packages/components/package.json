@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.13",
     "open-color": "^1.6.2",
     "prop-types": "^15.6.0",
     "shevyjs": "^1.1.0",
